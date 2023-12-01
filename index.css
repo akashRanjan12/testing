@@ -1,0 +1,414 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #638ecb;
+  font-family: "Times New Roman", Times, serif;
+}
+a:hover {
+  color: rgb(130, 3, 51);
+}
+
+video {
+  height: 80vh;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+#detail_box {
+  padding: 10px;
+  height: auto;
+  width: 40vw;
+  background-color: rgba(45, 223, 21, 0.3);
+  position: absolute;
+  top: 30%;
+  left: 8%;
+  color: whitesmoke;
+  font-size: 1.1em;
+  border-radius: 10px;
+  transition: filter 1s;
+}
+#detail_box:hover {
+  filter: drop-shadow(10px 10px 8px black);
+}
+/* navbar */
+.navbar {
+  height: 9vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 1%;
+  transition: background-color 1s;
+}
+.navbar:hover {
+  background-color: rgba(153, 255, 0, 0.4);
+}
+/* logo */
+#logo {
+  text-decoration-line: line-through;
+  font-size: 2.5em;
+  padding-left: 5px;
+  color: rgb(215, 3, 3);
+}
+/* search bar */
+#search01 {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: aquamarine;
+  font-size: 1.2em;
+  padding-left: 5px;
+}
+#search_bar {
+  background: linear-gradient(to right, darkgreen, black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 3px;
+  height: 4vh;
+  width: 50vw;
+  gap: 4px;
+}
+#search_icon {
+  color: rgb(129, 201, 21);
+  font-size: 1.5em;
+}
+/* content part */
+#content_icon_open {
+  font-size: 1.5em;
+}
+#content_list {
+  /* background-color: rgba(45, 223, 21, 0.3); */
+  background-color: rgb(0, 0, 0, 0.3);
+  height: auto;
+  width: max-content;
+  padding: 40px 10px 20px 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  visibility: hidden;
+  color: white;
+  gap: 10px;
+  transition: all 0.7s;
+}
+#content_list:hover {
+  filter: drop-shadow(10px 10px 8px rgb(255, 255, 255, 0.4));
+}
+#xmark {
+  visibility: hidden;
+  padding-right: 5px;
+  font-size: 1.2em;
+}
+#content_icon_open:hover {
+  #content_list {
+    visibility: visible;
+  }
+  #xmark {
+    visibility: visible;
+  }
+  #line_bar {
+    visibility: hidden;
+  }
+}
+/* inside the content icon or content items */
+#up {
+  visibility: hidden;
+}
+#content_id:hover {
+  #up {
+    visibility: visible;
+  }
+  #down {
+    visibility: hidden;
+  }
+}
+/* catageies */
+#cat_items {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  padding-left: 25px;
+}
+.content_id01 {
+  height: 3vh;
+}
+.content_id01:hover {
+  height: auto;
+  #cat_items {
+    visibility: visible;
+  }
+}
+/* contacts */
+.content_id02 {
+  height: 3vh;
+}
+.content_id02:hover {
+  height: auto;
+  #cont_items {
+    visibility: visible;
+  }
+}
+#cont_items {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  padding-left: 20px;
+}
+/* animals */
+.content_id03 {
+  height: 3vh;
+}
+.content_id03:hover {
+  height: auto;
+  #animals_name {
+    visibility: visible;
+  }
+}
+#animals_name {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  padding-left: 25px;
+}
+/* main part */
+/* classification details */
+#Cdata {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.classification {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 1.1em;
+}
+#animal_classn_ {
+  height: auto;
+  width: 40vw;
+}
+#animal_classn_:hover {
+  filter: drop-shadow(10px 10px 9px rgb(255, 255, 255, 0.5));
+}
+/* left side main part */
+.main_content {
+  padding-top: 10px;
+  height: auto;
+  width: 100%;
+  display: flex;
+}
+/* left */
+#social {
+  padding-left: 15px;
+}
+#left_sidebar {
+  width: calc(100% - 75vw);
+  height: auto;
+  overflow-y: auto;
+  color: white;
+  border-right: 1px solid white;
+  padding-top: 5px;
+}
+#heading1 {
+  padding: 5px;
+}
+ul {
+  padding-left: 30px;
+  line-height: 3.5vh;
+  text-transform: uppercase;
+}
+li:hover {
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+/* right */
+.right_sidebar {
+  padding-top: 10px;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+/* inside part of right sidebar */
+.inside_right_side-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 7vh;
+}
+.image {
+  height: 270px;
+  width: 270px;
+  border: 2px solid black;
+  border-block-color: green;
+  border-radius: 50%;
+}
+#image1 {
+  background-image: url("images/dog_img.png");
+  background-position: center;
+  background-size: cover;
+}
+#image1:hover {
+  background-size: auto;
+  cursor: pointer;
+}
+#wild_animal {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#image2 {
+  background-image: url("images/img01_imgclass01.png");
+  background-position: center;
+  background-size: cover;
+}
+#image2:hover {
+  background-size: auto;
+  cursor: pointer;
+}
+.data {
+  width: 55vw;
+  height: auto;
+  color: white;
+  font-size: 1.1em;
+  font-family: "Times New Roman", Times, serif;
+}
+/* content last data */
+#head {
+  padding-left: 5px;
+}
+#body {
+  padding-left: 15px;
+}
+.content_last_data {
+  padding-top: 10px;
+  color: white;
+  font-size: 1.1em;
+}
+/* footer part */
+.foot_container {
+  padding-bottom: 20px;
+  height: auto;
+  width: 100%;
+  background: linear-gradient(10deg, rgb(145, 64, 165), rgb(241, 255, 84));
+  display: flex;
+}
+#left {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  line-height: 3vh;
+}
+#right {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.1em;
+}
+
+/*------------------start page 02--------------------------------------
+  -------------------------------------------------------------- */
+#head_page02 {
+  cursor: pointer;
+  padding-top: 3vh;
+  height: auto;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  color: #003554;
+  font-size: 2.3em;
+  text-align: center;
+  transition: background 1s;
+}
+#head_page02:hover {
+  background-color: rgb(143, 198, 62);
+}
+#img_page02 {
+  height: 280px;
+  width: 220px;
+  /* cursor: pointer; */
+}
+.up {
+  font-size: 1.7em;
+  position: absolute;
+  right: 0;
+}
+.fa-solid {
+  padding: 10px;
+}
+/* ---------------------end page 02---------------------------------------*/
+/*------------------start page 03--------------------------------------
+  -------------------------------------------------------------- */
+#img_page03 {
+  margin-top: 10px;
+  height: 70vh;
+  width: 100%;
+  background-image: url("images/tiger_03.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: blur(2px);
+  filter: drop-shadow(10px 10px 10px black);
+  /* text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.8em;
+}
+#data_03 {
+  height: auto;
+  width: 50vw;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.logo_03 {
+  position: absolute;
+  top: 20px;
+}
+/* ---------------------end page 03---------------------------------------*/
+/*-------------------- media querry part--------------------------*/
+@media (max-width: 768px) {
+  /* main part */
+  .inside_right_side-bar {
+    flex-direction: column;
+  }
+  #wild_animal {
+    flex-direction: column;
+  }
+  .data {
+    padding: 5px;
+    width: auto;
+  }
+  /* footer */
+  .foot_container {
+    flex-direction: column;
+  }
+  #left {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  /* main part */
+  .main_content {
+    flex-direction: column;
+  }
+  #left_sidebar {
+    width: 100%;
+  }
+  ul {
+    column-count: 2;
+  }
+}
